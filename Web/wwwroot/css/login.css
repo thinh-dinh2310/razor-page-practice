@@ -1,0 +1,222 @@
+﻿*,
+:after,
+:before {
+    box-sizing: border-box;
+    border: 0 solid #eeedf2;
+}
+
+* {
+    --tw-shadow: 0 0 transparent;
+}
+
+* {
+    --tw-ring-inset: var(--tw-empty, /*!*/
+    /*!*/
+    );
+    --tw-ring-offset-width: 0px;
+    --tw-ring-offset-color: #fff;
+    --tw-ring-offset-shadow: 0 0 transparent;
+    --tw-ring-shadow: 0 0 transparent;
+    --tw-shadow: 0 0 transparent;
+    font-family: 'Manrope', sans-serif;
+}
+
+.background {
+    font-weight: 500;
+    letter-spacing: .01rem;
+    cursor: url(https://cdn.visily.ai/app/production/1665651318150/static/media/Default.44800a23.svg) 5 3, auto;
+    background-image: url(https://cdn.visily.ai/app/production/1665651318150/static/media/AuthFormBackground.71dc9154.svg), linear-gradient(110.14deg, rgb(72, 63, 211) 0%, rgb(150, 58, 223) 100%);
+    padding: 1.5rem;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    --tw-bg-opacity: 1;
+    background-color: rgba(248, 248, 250, var(--tw-bg-opacity));
+    font-family: 'Manrope', sans-serif;
+}
+
+.login-form {
+    max-width: 32rem;
+    width: 432px;
+}
+
+.login-form-wrapper {
+    --tw-bg-opacity: 1;
+    background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    --tw-shadow: 0px 0px 1px rgba(18, 15, 40, 0.24), 0px 3px 6px rgba(18, 15, 40, 0.12), 0px 0.5px 2px rgba(18, 15, 40, 0.06);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 transparent), var(--tw-ring-shadow, 0 0 transparent), var(--tw-shadow);
+}
+
+.login-form-title {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+}
+
+.login-title {
+    font-weight: 700;
+    font-size: 1.875rem;
+    line-height: 2.5rem;
+}
+
+.email-wrapper,
+.password-wrapper {
+    position: relative;
+}
+
+.email-icon,
+.password-icon {
+    display: block;
+    vertical-align: middle;
+    height: 1.25rem;
+    margin-top: 0.75rem;
+    margin-left: 0.75rem;
+    position: absolute;
+    stroke: currentColor;
+    --tw-text-opacity: 1;
+    color: rgba(19, 17, 38, var(--tw-text-opacity));
+    width: 1.25rem;
+}
+
+.email-input,
+.password-input {
+    font-family: inherit;
+    font-size: 100%;
+    padding: 0;
+    line-height: inherit;
+    --tw-border-opacity: 1;
+    border-color: rgba(231, 230, 239, var(--tw-border-opacity));
+    border-radius: 0.25rem;
+    border-width: 1px;
+    display: block;
+    height: 2.75rem;
+    margin-top: 1.25rem;
+    padding-left: 2.5rem;
+    --tw-text-opacity: 1;
+    color: rgba(19, 17, 38, var(--tw-text-opacity));
+    width: 100%;
+}
+
+.eye-icon {
+    user-select: none;
+    width: 1.5rem;
+    --tw-translate-x: 0;
+    --tw-translate-y: 0;
+    --tw-rotate: 0;
+    --tw-skew-x: 0;
+    --tw-skew-y: 0;
+    --tw-scale-x: 1;
+    --tw-scale-y: 1;
+    transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    --tw-translate-y: -50%;
+}
+
+.button-wrapper {
+    margin-top: 1.25rem;
+}
+
+.login-button,
+.register-button {
+    --tw-bg-opacity: 1;
+    background-color: rgba(99, 77, 209, var(--tw-bg-opacity));
+    border-radius: 0.375rem;
+    cursor: url(https://cdn.visily.ai/app/production/1665651318150/static/media/Pointer.1b7abbd6.svg) 12 6, auto !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    --tw-text-opacity: 1;
+    color: rgba(255, 255, 255, var(--tw-text-opacity));
+    transition-property: background-color, border-color, color, fill, stroke;
+    transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+    transition-duration: .15s;
+    transition-duration: .2s;
+}
+
+.or-split-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.or-relative {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 4.875rem;
+}
+
+.or-br {
+    --tw-border-opacity: 1;
+    border-color: rgba(238, 237, 242, var(--tw-border-opacity));
+    border-top-width: 1px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+}
+
+.or-text {
+    font-size: .875rem;
+    line-height: 1.125rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    position: relative;
+    z-index: 10;
+    --tw-text-opacity: 1;
+    color: rgba(63, 60, 89, var(--tw-text-opacity));
+}
+
+.register-wrapper {
+    margin-top: 0.5rem;
+}
+
+body{
+    margin: 0px;
+}
+
+.register-button:hover, .login-button:hover {
+    color: white;
+    text-decoration: none;
+    --tw-bg-opacity: 1;
+    background-color: rgba(142,125,227,var(--tw-bg-opacity));
+}
+
+.already-account {
+    margin-top: 1.5rem;
+    text-align: center;
+    color: rgba(255,255,255,var(--tw-text-opacity));
+    --tw-text-opacity: 0.7;
+}
+
+    .already-account a {
+        cursor: url(https://cdn.visily.ai/app/production/1665651318150/static/media/Pointer.1b7abbd6.svg) 12 6,auto;
+        font-weight: 700;
+        color: rgba(255,255,255,var(--tw-text-opacity));
+        --tw-text-opacity: 1;
+        text-decoration: underline;
+    }
+
+    .already-account a:hover {
+        cursor: url(https://cdn.visily.ai/app/production/1665651318150/static/media/Pointer.1b7abbd6.svg) 12 6,auto;
+        font-weight: 700;
+        color: rgba(255,255,255,var(--tw-text-opacity));
+        --tw-text-opacity: 1;
+        text-decoration: underline;
+    }
+
+.field-validation-error{
+    padding-left:5px;
+}
+
+.field-validation-error:empty{
+    padding: 0;
+    margin: 0;
+}

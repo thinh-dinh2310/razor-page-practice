@@ -1,0 +1,95 @@
+﻿@page
+@model Web.Pages.Auth.RegisterModel
+@{
+    Layout = "~/Pages/Shared/_Layout_Blank.cshtml";
+}
+<link rel="stylesheet" href="~/css/login.css" />
+<div class="background">
+    <div class="login-form">
+        <div>
+            <div class="login-form-wrapper">
+                <div class="login-form-title">
+                    <div class="login-title">Register</div>
+                </div>
+                <form asp-action="Login">
+                    <div class="email-wrapper">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="current" class="email-icon">
+                            <path d="M3 5.25H21V18C21 18.1989 20.921 18.3897 20.7803 18.5303C20.6397 18.671 20.4489 18.75 20.25 18.75H3.75C3.55109 18.75 3.36032 18.671 3.21967 18.5303C3.07902 18.3897 3 18.1989 3 18V5.25Z"
+                                  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M21 5.25L12 13.5L3 5.25" stroke-width="1.5" stroke-linecap="round"
+                                  stroke-linejoin="round"></path>
+                        </svg>
+                        <input asp-for="RegisterUser.Email" type="text" class="email-input" placeholder="Email" value="">
+                        <span asp-validation-for="RegisterUser.Email" class="text-danger"></span>
+                    </div>
+                    <div class="password-wrapper">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="password-icon">
+                            <path d="M7.27886 9.59616C6.79706 8.39441 6.74497 7.06317 7.13139 5.82746C7.51781 4.59175 8.31905 3.52735 9.39965 2.81419C10.4803 2.10103 11.774 1.78285 13.0621 1.91343C14.3502 2.04401 15.5537 2.61534 16.4693 3.53085C17.3848 4.44636 17.9561 5.64989 18.0867 6.93802C18.2172 8.22614 17.8991 9.51984 17.1859 10.6005C16.4727 11.6811 15.4083 12.4823 14.1726 12.8687C12.9369 13.2551 11.6057 13.203 10.4039 12.7212L10.404 12.7211L9.37524 13.7498H7.50024V15.6248H5.62524V17.4998H2.50024V14.3748L7.27899 9.59609L7.27886 9.59616Z"
+                                  stroke="#3F3C59" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            </path>
+                            <path d="M14.0625 6.71875C14.494 6.71875 14.8438 6.36897 14.8438 5.9375C14.8438 5.50603 14.494 5.15625 14.0625 5.15625C13.631 5.15625 13.2812 5.50603 13.2812 5.9375C13.2812 6.36897 13.631 6.71875 14.0625 6.71875Z"
+                                  fill="#9C99B2" stroke="#3F3C59" stroke-width="1.2" stroke-linecap="round"
+                                  stroke-linejoin="round"></path>
+                        </svg>
+                        <input asp-for="RegisterUser.Password" type="password" class="password-input" placeholder="Password" value="">
+                        <span asp-validation-for="RegisterUser.Password" class="text-danger"></span>
+                    </div>
+                    <div class="password-wrapper">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="password-icon">
+                            <path d="M7.27886 9.59616C6.79706 8.39441 6.74497 7.06317 7.13139 5.82746C7.51781 4.59175 8.31905 3.52735 9.39965 2.81419C10.4803 2.10103 11.774 1.78285 13.0621 1.91343C14.3502 2.04401 15.5537 2.61534 16.4693 3.53085C17.3848 4.44636 17.9561 5.64989 18.0867 6.93802C18.2172 8.22614 17.8991 9.51984 17.1859 10.6005C16.4727 11.6811 15.4083 12.4823 14.1726 12.8687C12.9369 13.2551 11.6057 13.203 10.4039 12.7212L10.404 12.7211L9.37524 13.7498H7.50024V15.6248H5.62524V17.4998H2.50024V14.3748L7.27899 9.59609L7.27886 9.59616Z"
+                                  stroke="#3F3C59" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            </path>
+                            <path d="M14.0625 6.71875C14.494 6.71875 14.8438 6.36897 14.8438 5.9375C14.8438 5.50603 14.494 5.15625 14.0625 5.15625C13.631 5.15625 13.2812 5.50603 13.2812 5.9375C13.2812 6.36897 13.631 6.71875 14.0625 6.71875Z"
+                                  fill="#9C99B2" stroke="#3F3C59" stroke-width="1.2" stroke-linecap="round"
+                                  stroke-linejoin="round"></path>
+                        </svg>
+                        <input asp-for="RegisterUser.ConfirmPassword" type="password" class="password-input" placeholder="Confirm Password" value="">
+                        <span asp-validation-for="RegisterUser.ConfirmPassword" class="text-danger"></span>
+                    </div>
+                    <div class="email-wrapper">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="email-icon">
+                            <path d="M10 17.5C14.1421 17.5 17.5 14.1421 17.5 10C17.5 5.85786 14.1421 2.5 10 2.5C5.85786 2.5 2.5 5.85786 2.5 10C2.5 14.1421 5.85786 17.5 10 17.5Z" stroke="#3F3C59" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M10 12.5C11.7259 12.5 13.125 11.1009 13.125 9.375C13.125 7.64911 11.7259 6.25 10 6.25C8.27411 6.25 6.875 7.64911 6.875 9.375C6.875 11.1009 8.27411 12.5 10 12.5Z" stroke="#3F3C59" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M4.98438 15.5761C5.45516 14.6505 6.17291 13.8732 7.05815 13.3303C7.94339 12.7874 8.9616 12.5 10.0001 12.5C11.0385 12.5 12.0567 12.7874 12.942 13.3303C13.8272 13.8732 14.545 14.6505 15.0158 15.5761" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                        <input asp-for="RegisterUser.FirstName" type="text" class="email-input" placeholder="First Name" value="">
+                        <span asp-validation-for="RegisterUser.FirstName" class="text-danger"></span>
+                    </div>
+                    <div class="email-wrapper">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="email-icon">
+                            <path d="M10 17.5C14.1421 17.5 17.5 14.1421 17.5 10C17.5 5.85786 14.1421 2.5 10 2.5C5.85786 2.5 2.5 5.85786 2.5 10C2.5 14.1421 5.85786 17.5 10 17.5Z" stroke="#3F3C59" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M10 12.5C11.7259 12.5 13.125 11.1009 13.125 9.375C13.125 7.64911 11.7259 6.25 10 6.25C8.27411 6.25 6.875 7.64911 6.875 9.375C6.875 11.1009 8.27411 12.5 10 12.5Z" stroke="#3F3C59" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M4.98438 15.5761C5.45516 14.6505 6.17291 13.8732 7.05815 13.3303C7.94339 12.7874 8.9616 12.5 10.0001 12.5C11.0385 12.5 12.0567 12.7874 12.942 13.3303C13.8272 13.8732 14.545 14.6505 15.0158 15.5761" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                        <input asp-for="RegisterUser.LastName" type="text" class="email-input" placeholder="Last Name" value="">
+                        <span asp-validation-for="RegisterUser.LastName" class="text-danger"></span>
+                    </div>
+                    <div class="email-wrapper">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" class="email-icon">
+                            <path d="M92.5,124.8a83.6,83.6,0,0,0,39,38.9,8,8,0,0,0,7.9-.6l25-16.7a7.9,7.9,0,0,1,7.6-.7l46.8,20.1a7.9,7.9,0,0,1,4.8,8.3A48,48,0,0,1,176,216,136,136,0,0,1,40,80,48,48,0,0,1,81.9,32.4a7.9,7.9,0,0,1,8.3,4.8l20.1,46.9a8,8,0,0,1-.6,7.5L93,117A8,8,0,0,0,92.5,124.8Z" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="8" />
+                        </svg>
+                        <input asp-for="RegisterUser.Phone" type="text" class="email-input" placeholder="Phone" value="">
+                        <span asp-validation-for="RegisterUser.Phone" class="text-danger"></span>
+                    </div>
+                    <div class="email-wrapper">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="current" class="email-icon">
+                            <path d="M3 5.25H21V18C21 18.1989 20.921 18.3897 20.7803 18.5303C20.6397 18.671 20.4489 18.75 20.25 18.75H3.75C3.55109 18.75 3.36032 18.671 3.21967 18.5303C3.07902 18.3897 3 18.1989 3 18V5.25Z"
+                                  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M21 5.25L12 13.5L3 5.25" stroke-width="1.5" stroke-linecap="round"
+                                  stroke-linejoin="round"></path>
+                        </svg>
+                        <input asp-for="RegisterUser.Address" type="text" class="email-input" placeholder="Address" value="">
+                        <span asp-validation-for="RegisterUser.Address" class="text-danger"></span>
+                    </div>
+                    <div class="button-wrapper"><button type="submit" class="login-button" style="width: 100%;">Register</button></div>
+                </form>
+            </div>
+            <div class="already-account">Already have an account? <a asp-page="/Auth/Login" class="cursor-pointer underline font-bold text-white text-opacity-100">Log in now</a></div>
+        </div>
+    </div>
+</div>
+<hr />
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

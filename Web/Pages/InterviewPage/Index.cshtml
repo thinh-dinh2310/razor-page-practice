@@ -1,0 +1,66 @@
+﻿@page
+@model Web.Pages.InterviewPage.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Interview[0].StartDateTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Interview[0].EndDateTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Interview[0].Feedback)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Interview[0].Result)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Interview[0].ApplicantPost)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Interview[0].Interviewer)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Interview) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.StartDateTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EndDateTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Feedback)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Result)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ApplicantPost.Post.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Interviewer.Email)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ApplicantId">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.ApplicantId">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ApplicantId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

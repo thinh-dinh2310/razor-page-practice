@@ -1,0 +1,54 @@
+﻿@page
+@model Web.Pages.ApplicantPosts.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ApplicantPost[0].Message)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ApplicantPost[0].Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ApplicantPost[0].Applicant)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ApplicantPost[0].Post)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.ApplicantPost)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Message)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Status)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Applicant.FirstName) @Html.DisplayFor(modelItem => item.Applicant.LastName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Post.Title)
+                </td>
+                <td>
+                    <a asp-page="../InterviewPage/Create" asp-route-id="@item.ApplicantId">Accept</a> |
+                    <a asp-page="./Delete" asp-route-id="@item.PostId">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

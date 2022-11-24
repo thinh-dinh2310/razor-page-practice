@@ -1,0 +1,48 @@
+﻿@page
+@model Web.Pages.InterviewPage.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Interview</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Interview.InterviewerId" />
+            <div class="form-group">
+                <label asp-for="Interview.StartDateTime" class="control-label"></label>
+                <input asp-for="Interview.StartDateTime" class="form-control" />
+                <span asp-validation-for="Interview.StartDateTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Interview.EndDateTime" class="control-label"></label>
+                <input asp-for="Interview.EndDateTime" class="form-control" />
+                <span asp-validation-for="Interview.EndDateTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Interview.Feedback" class="control-label"></label>
+                <input asp-for="Interview.Feedback" class="form-control" />
+                <span asp-validation-for="Interview.Feedback" class="text-danger"></span>
+            </div>
+            <input type="hidden" asp-for="Interview.Round" />
+            <input type="hidden" asp-for="Interview.PostId" />
+            <input type="hidden" asp-for="Interview.ApplicantId" />
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

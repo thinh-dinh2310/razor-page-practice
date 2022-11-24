@@ -1,0 +1,43 @@
+﻿@model Web.Pages.HomeModel
+@using BusinessObject
+
+<div class="list-jobs list d-flex flex-wrap">
+    @foreach (var item in Model.postList.data)
+    {
+        <div class="job-item mr-3">
+            <h6 class="job_title">
+                @Html.DisplayFor(modelItem => item.Title)
+            </h6>
+            <div class="job-details">
+                <p class="work_time">@Html.DisplayFor(modelItem => item.Level.LevelName)</p>
+                <p class="location">@Html.DisplayFor(modelItem => item.LocationPosts.FirstOrDefault().Location.LocationName)</p>
+                <p class="date">@item.CreatedAt.ToString("MMMM dd, yyyy")</p>
+            </div>
+            <div class="bonus ">
+                <p class="remote"><span>@Html.DisplayFor(modelItem => item.Category.CategoryName)</span></p>
+                @foreach (var items in item.PostSkills)
+                {
+                    <p class="month">
+                        <span>@items.Skills.SkillName</span>
+                    </p>
+                }
+            </div>
+            <a asp-page="PostPage/Details" asp-area="" asp-route-id="@item.PostId" class="link-overlay"></a>
+        </div>
+    }
+</div>
+<div class="inner-pagination">
+    <ul class="pagination">
+        @foreach (int i in Enumerable.Range(1, ((Model.postList.totalItems - 1) / Model.postList.limit) + 1))
+        {
+            if (i == Convert.ToInt32(ViewData["CurrentPage"]))
+            {
+                <li class="active"><a class="page" href="#" onclick="jobPaging(@i - 1)">@i</a></li>
+            }
+            else
+            {
+                <li><a class="page" href="#" onclick="jobPaging(@i - 1)">@i</a></li>
+            }
+        }
+    </ul>
+</div>

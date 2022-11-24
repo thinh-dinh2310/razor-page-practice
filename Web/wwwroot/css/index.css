@@ -1,0 +1,232 @@
+﻿.max-width-container {
+    margin: 0 auto;
+    max-width: 1400px;
+    padding: 0px 0px 64px;
+    width: 100%;
+}
+
+.max-width-container {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.hero-backgrounds {
+    background-image: linear-gradient(90deg,#764fe3 0%,#7592ee 100%);
+}
+
+.hero {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+}
+
+.header {
+    max-width: 650px;
+    padding: 0;
+}
+
+.hero .header h1 {
+    padding-bottom: 24px;
+    color: #fff;
+    font-size: 48px;
+    line-height: 56px;
+}
+
+.hero .header .search-bar-package {
+    display: block;
+}
+
+.logged-out-homepage .hero .header .search-bar-package {
+    z-index: 5;
+}
+
+.search-bar-package {
+    position: relative;
+}
+
+    .search-bar-package .search-form {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        position: relative;
+        height: 34px;
+    }
+
+.hero .header .search-bar-package form {
+    height: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+}
+
+.logged-out-homepage .hero .header .search-bar-package form {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+
+.search-bar-package .search-form .search-bar-icon {
+    position: absolute;
+    z-index: 5;
+}
+
+.logged-out-homepage .hero .header .search-bar-package form .search-bar-icon {
+    top: 16px;
+    left: 16px;
+}
+
+.XQskgrQ {
+    fill: #74767e;
+    background: none;
+    border: none;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+    .XQskgrQ svg {
+        float: left;
+        height: 100%;
+        width: 100%;
+    }
+
+.hero .header .search-bar-package form input {
+    border-radius: 4px 0 0 4px;
+    outline: none;
+}
+
+.hero .header .search-bar-package form input {
+    font-size: 16px;
+    height: 48px;
+    padding-left: 44px;
+    margin-bottom: 0;
+}
+
+.search-bar-package .search-form input {
+    border-right: 0;
+    padding-top: 8px;
+    -webkit-box-flex: 1;
+    flex: 1 1 auto;
+    padding: 7px 7px 7px 28px;
+    border-color: #dadbdd;
+    box-shadow: none;
+    z-index: 3;
+}
+
+.search-bar-package .search-form button {
+    flex-shrink: 0;
+    z-index: 3;
+}
+
+.hero .header .search-bar-package form button {
+    height: 48px;
+    border-radius: 0 4px 4px 0;
+    padding: 12px 24px;
+    font-weight: 700;
+}
+
+.hero .header .search-bar-package .submit-button {
+    display: block;
+    margin: 12px 0 0;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.hero .header .search-bar-package .submit-button {
+    margin: 0;
+    border-radius: 0 4px 4px 0;
+    color: white;
+}
+
+.search-bar-package .search-form {
+    display: flex;
+    position: relative;
+    height: auto;
+}
+
+.bg-co-green-700 {
+    background-color: #6454D6;
+}
+
+.FW1syM7 {
+    border: 1px solid transparent;
+    border-radius: 4px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 100%;
+    padding: 12px 24px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    -webkit-transition: 70ms cubic-bezier(.75, 0, .25, 1);
+    -o-transition: 70ms cubic-bezier(.75, 0, .25, 1);
+    transition: 70ms cubic-bezier(.75, 0, .25, 1);
+}
+
+.search-bar-package form .search-bar-icon {
+    top: 16px;
+    left: 16px;
+}
+
+input[type=search] {
+    -webkit-appearance: none;
+    background-color: #fff;
+    border: 1px solid #c5c6c9;
+    border-radius: 4px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #404145;
+    font: inherit;
+    padding: 8px 12px;
+    resize: none;
+    -webkit-transition: .15s ease-in-out;
+    -o-transition: .15s ease-in-out;
+    transition: .15s ease-in-out;
+    width: 100%;
+}
+
+.hero-andrea {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    -webkit-animation: fade 2s linear;
+    animation: fade 2s linear;
+    -webkit-transition: opacity .9s;
+    -o-transition: opacity .9s;
+    transition: opacity .9s;
+    background-position: bottom;
+    background-color: #023a15;
+    background-image: linear-gradient(90deg,#764fe3 0%,#7592ee 100%);
+}
+
+.hero-backgrounds {
+    position: relative;
+    height: 680px;
+    width: 100%;
+}
+
+.co-green-700 {
+    color: #6454D6;
+}

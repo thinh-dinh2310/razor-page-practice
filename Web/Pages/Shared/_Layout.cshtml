@@ -1,0 +1,82 @@
+﻿ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Web</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+    <header class="header-package fiverr-header logged-out-homepage-header" data-reactroot="">
+        <div class="header-row-wrapper">
+            <div class="header-row max-width-container equal-padding row-main">
+                <nav class="fiverr-nav fiverr-nav-right nav-with-space">
+                    <ul>
+                        <li class="display-from-md"><a asp-area="" asp-page="/Index" class="aDeZs5- business-nav-link nav-link">Home</a></li>
+                        <li class="display-from-md"><a asp-area="" asp-page="/Home" class="aDeZs5- business-nav-link nav-link">Jobs</a></li>
+                        @if (User.Identity.IsAuthenticated)
+                        {
+
+                            @if ((User.IsInRole("ADMINISTRATOR")))
+                            {
+                                <li class="display-from-md"><a asp-area="" asp-page="/UserManagement/Index" class="aDeZs5- business-nav-link nav-link">Users</a></li>
+                                <li class="display-from-md"><a asp-area="" asp-page="/LocationPage/Index" class="aDeZs5- business-nav-link nav-link">Location</a></li>
+                                <li class="display-from-md"><a asp-area="" asp-page="/SkillPage/Index" class="aDeZs5- business-nav-link nav-link">Skills</a></li>
+                                <li class="display-from-md"><a asp-area="" asp-page="/CategoryPage/Index" class="aDeZs5- business-nav-link nav-link">Category</a></li>
+                                <li class="display-from-md"><a asp-area="" asp-page="/LevelPage/Index" class="aDeZs5- business-nav-link nav-link">Level</a></li>
+                            }
+
+                            @if (User.IsInRole("HR"))
+                            {
+                                <li class="display-from-md"><a asp-area="" asp-page="/PostPage/Index" class="aDeZs5- business-nav-link nav-link">Posts</a></li>
+                                <li class="display-from-md"><a asp-area="" asp-page="/InterviewPage/Index" class="aDeZs5- business-nav-link nav-link">Interview</a></li>
+                            }
+
+                            @if ((User.IsInRole("USER")))
+                            {
+                                <li class="display-from-md"><a asp-area="" asp-page="/Profile/Index" class="aDeZs5- business-nav-link nav-link">Profile</a></li>
+                                <li class="display-from-md"><a asp-area="" asp-page="/Profile/Index" class="aDeZs5- business-nav-link nav-link">Your Apply</a></li>
+                                <li class="display-from-md"><a asp-area="" asp-page="/Profile/Index" class="aDeZs5- business-nav-link nav-link">Your Interview</a></li>
+                            }
+                        }
+                    </ul>
+
+                    <ul>
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <li class="">
+                                Welcome, @User.Identity.Name
+                            </li>
+                            <li class="">
+                                <form method="post" class="nav-link text-dark" asp-page="/Auth/Logout">    
+                                <button type="submit" class="ml-2 btn btn-link">Logout</button>
+                                </form>
+                            </li>
+                        }
+                        else
+                        {   
+                            
+                            <li class="">
+                                <a asp-area="" asp-page="/Auth/Login" class="FW1syM7 L1yjt43 xaFER3a p9qU5Ka co-green-700 js-open-popup-join fiverr-header-join">Join</a>
+                            </li>
+                        }
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    @RenderBody()
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

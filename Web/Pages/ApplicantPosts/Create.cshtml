@@ -1,0 +1,47 @@
+﻿@page
+@model Web.Pages.ApplicantPosts.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+<link rel="stylesheet" href="~/css/apply.css" />
+
+<div class="background">
+    <div class="row justify-content-center">
+        <div class="col-md-4 p-5 border" style="background: #f8f9fe">
+            <form method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label>Apply to @Model.Post.Title</label> -
+                    @if (Model.User.Resume != null)
+                    {
+                        <a id="base64Resume" asp-page-handler="resume" target="_blank" class="btn btn-sm btn-primary">View Resume</a>
+                    }
+                    else
+                    {
+                        <a href="javascript:void(0)" class="btn btn-sm btn-danger">You don't have a resume yet</a>
+                    }
+                </div>
+                <div class="form-outline mb-4">
+                    <input type="text" name="id" value="@Model.Post.PostId" hidden />
+                    <label form="message" class="form-label">Message</label>
+                    <textarea name="message" id="message" class="form-control" style="min-height:300px"></textarea>
+                    @if (ViewData["Message"] != null)
+                    {
+                        <h3 class="text-center text-danger">@ViewData["Message"]</h3>
+                    }
+                    @if (ViewData["ResumeMessage"] != null)
+                    {
+                        <h3 class="text-center text-danger">@ViewData["ResumeMessage"]</h3>
+                    }
+                </div>
+                <button type="submit" class="btn btn-primary btn-block mb-4">
+                    Send
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
